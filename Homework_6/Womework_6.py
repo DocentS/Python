@@ -65,7 +65,8 @@ for item in list_1:
         # list_tmp = [*list_tmp, int(item[i])]
         list_tmp = [*list_tmp, int(i)]
         # i += 1
-        print(i)
+        
+        # print(i)
         
     #     if type(item[i]) != type_name:
     #         del item[i]
