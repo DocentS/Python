@@ -68,6 +68,7 @@ for item in list_1:
         
         # print(i)
         
+        
     #     if type(item[i]) != type_name:
     #         del item[i]
     #         else:
