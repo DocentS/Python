@@ -55,40 +55,40 @@ print('ID list_3 :',id(list_3))
 print('\n')
 
 # не содержала вложености: внутренние списки должни бить расскрити;
-
 # каждая из копий имела єлементи списка только определенного типа данних - [int], [float], [str].
 list_tmp = list()
 for item in list_1:
-    # i = 0
-    # while i < len(item):
     for i in item:
-        # list_tmp = [*list_tmp, int(item[i])]
-        list_tmp = [*list_tmp, int(i)]
-        # i += 1
-        
-        # print(i)
-        
-        
-    #     if type(item[i]) != type_name:
-    #         del item[i]
-    #         else:
-    #             i += 1
-    # list_tmp = [*list_tmp, *item]
+        try:
+            list_tmp = [*list_tmp, int(i)]
+        except:
+            print('Ошибка конвертации в int:',i)
 list_1 = list_tmp
-print(list_1)
 
-# list_tmp = list()
-# for item in list_2:
-#     list_tmp = [*list_tmp, *item]
-# list_2 = list_tmp
+list_tmp = list()
+for item in list_2:
+    for i in item:
+        try:
+            list_tmp = [*list_tmp, float(i)]
+        except:
+            print('Ошибка конвертации в float:', i)
+list_2 = list_tmp
 
-# list_tmp = list()
-# for item in list_3:
-#     list_tmp = [*list_tmp, *item]
-# list_3 = list_tmp
- 
+list_tmp = list()
+for item in list_3:
+    for i in item:
+        try:
+            list_tmp = [*list_tmp, str(i)]
+        except:
+            print('Ошибка конвертации в str:', i)
+list_3 = list_tmp
+
 del(list_tmp)
-print(list_1)
+
+print('\n')
+print('list_1', list_1)
+print('list_2', list_2)
+print('list_3', list_3)
     
 # 1.4 Решение Задачи 2 должно бить полностью автоматизировано - не иметь hardcode. Єто позволит при каких-либо модификациях исходного списка, 
 # не меняю кода программи каждий раз получать привильное решение.
@@ -103,8 +103,3 @@ print(list_1)
 # "спред" оператор;
 # приведение типа данних к нужному;
 # вивод результата в виде принта.
-
-
-# -- Проверка на наличие реализаций
-# "спред" оператор
-# приведение типа данних к нужному
